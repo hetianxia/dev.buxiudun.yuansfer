@@ -40,7 +40,7 @@ func (this *MicropayController) Post() {
 		RmbAmount:   rmbAmt,
 		Vendor:      "wechatpay",
 		Reference:   reference,
-		IpnUrl:      ipnUrl,
+		IpnURL:      ipnUrl,
 		Description: description,
 		Note:        note,
 		Openid:      openid,

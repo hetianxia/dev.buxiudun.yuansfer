@@ -9,11 +9,6 @@ func main() {
 	beego.BConfig.Listen.EnableHTTPS = true
 	beego.BConfig.Listen.Graceful = true
 
-	// beego.BConfig.Listen.HTTPSPort = 443
-	// beego.BConfig.Listen.HTTPSCertFile = "./server.pem"
-	// beego.BConfig.Listen.HTTPSKeyFile = "./server.key"
-	//
-	// 注册 beego 路由
 	beego.Router("/", &controllers.HomeController{})
 	beego.Router("/pay", &controllers.HomeController{})
 	beego.Router("/inquire", &controllers.InquireController{})
@@ -29,6 +24,6 @@ func main() {
 	beego.Router("/instore-reverse", &controllers.InstoreReverseController{})
 	beego.Router("/micropay", &controllers.MicropayController{})
 	beego.Router("/refund", &controllers.RefundController{})
-	// 启动 beego
+
 	beego.Run()
 }
