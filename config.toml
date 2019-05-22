@@ -22,7 +22,6 @@ password_prefix = "PASSWORD_PREFIX"
 
 [token]
   # please get token from support@yuansfer.com
-  # online_token = "ONLINE_TOKEN"
-  online_token = "5cbfb079f15b150122261c8537086d77a"
+  online_token = "ONLINE_TOKEN"
   instore_token = "INSTORE_TOKEN"
   micropay_token = "MICROPAY_TOKEN"
