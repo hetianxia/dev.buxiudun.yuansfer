@@ -33,12 +33,6 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">支付方式：</label>
                 <div class="col-lg-6">
-                    <!-- <input id="vendor" class="form-control" name="vendor" placeholder="vendor"> -->
-                    <tr>
-                        <td>
-                            <input type="hidden" class="form-control" name="vendor1" value="vendor">
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             <select name="vendor">
@@ -72,11 +66,6 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Terminal：</label>
                 <div class="col-lg-6">
-                    <tr>
-                        <td>
-                            <input type="hidden" class="form-control" name="terminal1" value="terminal">
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             <select name="terminal">
@@ -115,11 +104,6 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Credit Type：</label>
                 <div class="col-lg-6">
-                    <tr>
-                        <td>
-                            <input type="hidden" class="form-control" name="CreditType" value="creditType">
-                        </td>
-                    </tr>
                     <tr>
                         <td>
                             <select name="creditType">
