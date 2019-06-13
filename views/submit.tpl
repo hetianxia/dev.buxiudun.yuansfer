@@ -33,6 +33,12 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">支付方式：</label>
                 <div class="col-lg-6">
+                    <!-- <input id="vendor" class="form-control" name="vendor" placeholder="vendor"> -->
+                    <tr>
+                        <td>
+                            <input type="hidden" class="form-control" name="vendor1" value="vendor">
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <select name="vendor">
@@ -66,6 +72,11 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Terminal：</label>
                 <div class="col-lg-6">
+                    <tr>
+                        <td>
+                            <input type="hidden" class="form-control" name="terminal1" value="terminal">
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <select name="terminal">
@@ -106,6 +117,11 @@
                 <div class="col-lg-6">
                     <tr>
                         <td>
+                            <input type="hidden" class="form-control" name="CreditType" value="creditType">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <select name="creditType">
                                 <option value="normal">normal</option>
                                 <option value="authorize">authorize</option>
@@ -113,6 +129,18 @@
                             </select>
                         </td>
                     </tr>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Payment Count：</label>
+                <div class="col-lg-6">
+                    <input id="paymentCount" class="form-control" name="paymentCount" placeholder="Payment Count">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Frequency：</label>
+                <div class="col-lg-6">
+                    <input id="frequency" class="form-control" name="frequency" placeholder="Frequency">
                 </div>
             </div>
             <div class="form-group">

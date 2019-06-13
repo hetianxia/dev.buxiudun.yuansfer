@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/astaxie/beego v1.11.1
-	github.com/yuansfer/golang_sdk v0.0.0-20190522052157-dc456e0cf94e
+	github.com/yuansfer/golang_sdk v0.0.0-20190613095045-819a5ef40615
 )
 
 replace (
