@@ -12,6 +12,7 @@ func main() {
 	beego.Router("/", &controllers.HomeController{})
 	beego.Router("/pay", &controllers.HomeController{})
 	beego.Router("/inquire", &controllers.InquireController{})
+	beego.Router("/recurring", &controllers.RecurringController{})
 	// beego.Router("/exchange-rate", &controllers.ExchangeRateController{})
 
 	beego.Router("/callback", &controllers.CallbackController{})
