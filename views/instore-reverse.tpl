@@ -1,5 +1,5 @@
 {{template "header"}}
-<title>pay - Yuansfer</title>
+<title>Reverse - Yuansfer</title>
 </head>
 
 <body onload="startTime()">
