@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	RecurringUrl = "creditpay/v2/tsys-recurring"
+	RecurringUrl = "creditpay/v2/credit-recurring"
 )
 
 type RecurringController struct {

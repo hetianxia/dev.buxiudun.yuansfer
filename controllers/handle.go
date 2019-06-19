@@ -100,9 +100,5 @@ func VerifySignNotify(values url.Values, token string) (m map[string]string, r b
 	pre := map2Str(m) + md5Token(token)
 	vs := md5Token(pre)
 
-	if vs == verifySign {
-		return m, true
-	}
-
-	return m, false
+	return m, vs == verifySign
 }
