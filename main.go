@@ -14,6 +14,7 @@ func main() {
 	beego.Router("/inquire", &controllers.InquireController{})
 	beego.Router("/recurring", &controllers.RecurringController{})
 	beego.Router("/online-reverse", &controllers.ReverseController{})
+	beego.Router("/forced-auth", &controllers.ForcedAuthController{})
 	// beego.Router("/exchange-rate", &controllers.ExchangeRateController{})
 
 	beego.Router("/callback", &controllers.CallbackController{})

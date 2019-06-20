@@ -17,6 +17,7 @@
                 <li {{if .IsMicroPay}}class="active" {{end}}><a href="/micropay">Micropay</a></li>
                 <li {{if .IsRecurring}}class="active" {{end}}><a href="/recurring">Recurring</a></li>
                 <li {{if .IsOnlineReverse}}class="active" {{end}}><a href="/online-reverse">Online Reverse</a></li>
+                <li {{if .IsForced}}class="active" {{end}}><a href="/forced-auth">Forced Auth</a></li>
             </ul>
         </div>
         <!-- <div class="pull-right">
