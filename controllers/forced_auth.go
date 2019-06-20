@@ -36,7 +36,7 @@ func (this *ForcedAuthController) Post() {
 	authCode := this.Input().Get("authCode")
 	cardNumber := this.Input().Get("cardNumber")
 	expirationDate := this.Input().Get("expirationDate")
-	transactionAmount := this.Input().Get("amount")
+	transactionAmount := this.Input().Get("amt")
 
 	req := &ForcedAuth{
 		Amt:            transactionAmount,
