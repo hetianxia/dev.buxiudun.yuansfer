@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"io"
 
 	yuan "github.com/yuansfer/golang_sdk"
@@ -13,6 +14,7 @@ type CallbackController struct {
 func (this *CallbackController) Get() {
 	token := yuan.YuansferAPI.Token.SecurepayToken
 	request := this.Input()
+	fmt.Println("callback received values:", request)
 	if verifySign := request.Get("verifySign"); "" != verifySign {
 		_, ret := yuan.VerifySignNotify(request, token)
 
@@ -35,6 +37,7 @@ func (this *CallbackController) Get() {
 func (this *CallbackController) Post() {
 	token := yuan.YuansferAPI.Token.SecurepayToken
 	request := this.Input()
+	fmt.Println("ipn received values:", request)
 	_, ret := yuan.VerifySignNotify(request, token)
 
 	response := ""

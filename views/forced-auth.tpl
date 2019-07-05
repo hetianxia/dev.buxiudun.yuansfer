@@ -43,6 +43,18 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-lg-4 control-label">CardNumber：</label>
+                <div class="col-lg-6">
+                    <input id="addr" class="form-control" name="address" placeholder="Address">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-4 control-label">CardNumber：</label>
+                <div class="col-lg-6">
+                    <input id="zip" class="form-control" name="zip" placeholder="Zip">
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
                     <a href="/forced-auth" target="_blank">
                         <button type="submit" class="btn btn-default" onclick="return checkInput();">提交</button>
