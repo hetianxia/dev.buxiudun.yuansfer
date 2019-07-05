@@ -35,15 +35,8 @@ github.com/siddontang/rdb v0.0.0-20150307021120-fc89ed2e418d/go.mod h1:AMEsy7v5z
 github.com/ssdb/gossdb v0.0.0-20180723034631-88f6b59b84ec/go.mod h1:QBvMkMya+gXctz3kmljlUCu/yB3GZ6oee+dUozsezQE=
 github.com/syndtr/goleveldb v0.0.0-20181127023241-353a9fca669c/go.mod h1:Z4AUp2Km+PwemOoO/VB5AOx9XSsIItzFjoJlOSiYmn0=
 github.com/wendal/errors v0.0.0-20130201093226-f66c77a7882b/go.mod h1:Q12BUT7DqIlHRmgv3RskH+UCM/4eqVMgI0EMmlSpAXc=
-github.com/yuansfer/golang_sdk v0.0.0-20190521010441-39aecd1ce3c2 h1:2RCt7ef6b517VwxGIVQhIcxhzPF1gyb8G9+wKhMvrwo=
-github.com/yuansfer/golang_sdk v0.0.0-20190521010441-39aecd1ce3c2/go.mod h1:I4ImSmRkyodOwtN87aV60cY2Rx0mTZkKfBVUtps3tHg=
-github.com/yuansfer/golang_sdk v0.0.0-20190522052157-dc456e0cf94e h1:MchzvT7TxK+k5UGzYRUfUoAk/9ll42M8T0XXVSJeCNU=
-github.com/yuansfer/golang_sdk v0.0.0-20190522052157-dc456e0cf94e/go.mod h1:I4ImSmRkyodOwtN87aV60cY2Rx0mTZkKfBVUtps3tHg=
-github.com/yuansfer/golang_sdk v0.0.0-20190613095045-819a5ef40615 h1:JvNGF/Au8Awl+PNa6p63zmvRsuHrrh/Gp4cCj/wyNcs=
-github.com/yuansfer/golang_sdk v0.0.0-20190613095045-819a5ef40615/go.mod h1:I4ImSmRkyodOwtN87aV60cY2Rx0mTZkKfBVUtps3tHg=
-golang.org/x/crypto v0.0.0-20181127143415-eb0de9b17e85 h1:et7+NAX3lLIk5qUCTA9QelBjGE/NkhzYw/mhnr0s7nI=
-golang.org/x/crypto v0.0.0-20181127143415-eb0de9b17e85/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
-golang.org/x/net v0.0.0-20181114220301-adae6a3d119a/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
+github.com/yuansfer/golang_sdk v0.0.0-20190705001654-ec26aa2e0b9c h1:OmojJZt2+PGJunPccGYgaXmVTvZxVgV+qe0Fwx7ZkyA=
+github.com/yuansfer/golang_sdk v0.0.0-20190705001654-ec26aa2e0b9c/go.mod h1:I4ImSmRkyodOwtN87aV60cY2Rx0mTZkKfBVUtps3tHg=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v2 v2.2.1/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
 gopkg.in/yaml.v2 v2.2.2 h1:ZCJp+EgiOT7lHqUV2J862kp8Qj64Jo6az82+3Td9dZw=
