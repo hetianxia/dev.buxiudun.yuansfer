@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	ReverseUrl = "appTransaction/v2/securepay-void"
+	ReverseUrl = "online/v2/securepay-void"
 )
 
 type OnlineReverse struct {

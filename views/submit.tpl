@@ -126,6 +126,7 @@
                                 <option value="normal">normal</option>
                                 <option value="authorize">authorize</option>
                                 <option value="recurring">recurring</option>
+                                <option value="cit">CIT</option>
                             </select>
                         </td>
                     </tr>
