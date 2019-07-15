@@ -15,7 +15,6 @@ func main() {
 	beego.Router("/recurring", &controllers.RecurringController{})
 	beego.Router("/online-reverse", &controllers.ReverseController{})
 	beego.Router("/forced-auth", &controllers.ForcedAuthController{})
-	// beego.Router("/exchange-rate", &controllers.ExchangeRateController{})
 
 	beego.Router("/callback", &controllers.CallbackController{})
 
@@ -27,6 +26,8 @@ func main() {
 	beego.Router("/instore-reverse", &controllers.InstoreReverseController{})
 	beego.Router("/micropay", &controllers.MicropayController{})
 	beego.Router("/refund", &controllers.RefundController{})
+
+	beego.AutoRouter(&controllers.RecurringController{})
 
 	beego.Run()
 }
