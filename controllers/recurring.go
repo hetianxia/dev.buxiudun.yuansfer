@@ -33,7 +33,6 @@ func (this *RecurringController) Get() {
 }
 
 func (this *RecurringController) Pay() {
-	fmt.Println("recurring pay")
 	merchantNo := this.Input().Get("merchantNo")
 	storeNo := this.Input().Get("storeNo")
 	scheduleNo := this.Input().Get("scheduleNo")

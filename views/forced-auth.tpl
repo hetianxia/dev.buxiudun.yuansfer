@@ -7,13 +7,13 @@
         {{template "navbar" .}}
         <form class="form-horizontal" method="POST" action="/forced-auth">
             <div class="form-group">
-                <label class="col-lg-4 control-label">merchantNo：</label>
+                <label class="col-lg-4 control-label">MerchantNo：</label>
                 <div class="col-lg-6">
                     <input id="merchantNo" class="form-control" name="merchantNo" placeholder="merchantNo">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">storeNo：</label>
+                <label class="col-lg-4 control-label">StoreNo：</label>
                 <div class="col-lg-6">
                     <input id="storeNo" class="form-control" name="storeNo" placeholder="storeNo">
                 </div>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">expirationDate：</label>
+                <label class="col-lg-4 control-label">ExpirationDate：</label>
                 <div class="col-lg-6">
                     <input id="expirationDate" class="form-control" name="expirationDate" placeholder="ExpirationDate">
                 </div>
@@ -43,13 +43,19 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">CardNumber：</label>
+                <label class="col-lg-4 control-label">CardType</label>
                 <div class="col-lg-6">
-                    <input id="addr" class="form-control" name="address" placeholder="Address">
+                    <input id="cardType" class="form-control" name="cardType" placeholder="cardType">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">CardNumber：</label>
+                <label class="col-lg-4 control-label">Address：</label>
+                <div class="col-lg-6">
+                    <input id="addr" class="form-control" name="addr" placeholder="Address">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-4 control-label">Zip：</label>
                 <div class="col-lg-6">
                     <input id="zip" class="form-control" name="zip" placeholder="Zip">
                 </div>

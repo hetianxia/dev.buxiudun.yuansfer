@@ -22,6 +22,7 @@ type ForcedAuth struct {
 	Amt            string `json:"transactionAmount"`
 	Address        string `json:"addressLine1"`
 	Zip            string `json:"zip"`
+	CardType       string `json:"cardType"`
 
 	RetCode string `json:"ret_code"`
 	RetMsg  string `json:"ret_msg"`
@@ -41,6 +42,7 @@ func (this *ForcedAuthController) Post() {
 	transactionAmount := this.Input().Get("amt")
 	addr := this.Input().Get("addr")
 	zip := this.Input().Get("zip")
+	cardType := this.Input().Get("cardType")
 
 	req := &ForcedAuth{
 		Amt:            transactionAmount,
@@ -51,6 +53,7 @@ func (this *ForcedAuthController) Post() {
 		StoreNo:        storeNo,
 		Address:        addr,
 		Zip:            zip,
+		CardType:       cardType,
 	}
 
 	resp, err := req.PostToYuansfer()
