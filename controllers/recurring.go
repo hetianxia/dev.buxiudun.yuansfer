@@ -7,7 +7,7 @@ import (
 
 const (
 	RecurringPayUrl    = "creditpay/v2/credit-recurring"
-	RecurringSearchUrl = "creditpay/v2/search-recurrings"
+	RecurringSearchUrl = "creditpay/v2/search-recurring"
 	RecurringUpdateUrl = "creditpay/v2/update-recurring"
 )
 
