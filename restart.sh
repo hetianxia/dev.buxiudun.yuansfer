@@ -8,4 +8,5 @@ else
 	echo "buxiudun does not exist."
 fi
 
-nohup /Users/nengjian/ldf/go/github.com/hetianxia/dev.buxiudun.yuansfer/buxiudun >> nohup.out 2>&1 &
+# nohup /Users/nengjian/ldf/go/github.com/hetianxia/dev.buxiudun.yuansfer/buxiudun >> nohup.out 2>&1 &
+nohup ./buxiudun >> nohup.out 2>&1 &

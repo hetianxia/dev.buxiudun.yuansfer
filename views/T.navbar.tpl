@@ -5,7 +5,6 @@
         <a class="navbar-brand" href="/">
             <img alt="Brand" src="http://oss.yuansfer.com/log_20190410.png?x-oss-process=image/resize,l_110" height="20">
         </a>
-        <p>8320 85284</p> 
         <div>
             <ul class="nav navbar-nav">
                 <li {{if .IsPay}}class="active" {{end}}><a href="/">Online Pay</a></li>
