@@ -5,7 +5,7 @@
 <body onload="startTime()">
     <div class="container" style="width: 500px;">
         {{template "navbar" .}}
-        <form class="form-horizontal" method="POST" action="/instore-add">
+        <form class="form-horizontal" method="POST" action="/instore-add-scanner">
             <div class="form-group">
                 <label class="col-lg-4 control-label">商户号：</label>
                 <div class="col-lg-6">
@@ -106,13 +106,13 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                    <a href="/instore-add">
+                    <a href="/instore-add-scanner">
                         <button type="submit" class="btn btn-default" onclick="return checkInput();">提交</button>
                     </a>
                     <button class="btn btn-default" onclick="return backToHome();">返回</button>
                     <script type="text/javascript">
                     function backToHome() {
-                        window.location.href = "/instore-add";
+                        window.location.href = "/instore-add-scanner";
                         return false;
                     }
 

@@ -7,16 +7,28 @@ import (
 	yuan "github.com/yuansfer/golang_sdk"
 )
 
-type InstoreAddController struct {
+const (
+	instoreAddScanner = "app-instore/v2/add-external"
+)
+
+type ScannerAddController struct {
 	Controller
 }
 
-func (this *InstoreAddController) Get() {
-	this.Data["IsInstoreAdd"] = true
-	this.TplName = "instore-add.tpl"
+type InstoreAddScanner struct {
+	MerchantNo   string `json:"merchantNo"`
+	StoreNo      string `json:"storeNo"`
+	VerifySign   string `json:"verifySign"`
+	Amount       string `json:"amount"`
+	StoreAdminNo string `json:"storeAdminNo"`
 }
 
-func (this *InstoreAddController) Post() {
+func (this *ScannerAddController) Get() {
+	this.Data["IsInstoreAddScanner"] = true
+	this.TplName = "instore-add-scanner.tpl"
+}
+
+func (this *ScannerAddController) Post() {
 
 	merchantNo := this.Input().Get("merchantNo")
 	storeNo := this.Input().Get("storeNo")
@@ -24,7 +36,7 @@ func (this *InstoreAddController) Post() {
 
 	amt := this.Input().Get("amt")
 
-	req := yuan.InstoreAdd{
+	req := InstoreAddScanner{
 		MerchantNo:   merchantNo,
 		StoreNo:      storeNo,
 		Amount:       amt,
@@ -54,4 +66,15 @@ func (this *InstoreAddController) Post() {
 	this.checkData("MerchantNo", resp.MerchantNo)
 
 	return
+}
+
+func (r InstoreAddScanner) PostToYuansfer() (string, error) {
+	var (
+		addUrl string
+	)
+
+	addUrl = YuansferHost + instoreAddScanner
+
+	values := generateValues(r, YuansferAPI.Token.InstoreToken)
+	return postToYuansfer(addUrl, values)
 }

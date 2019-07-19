@@ -21,7 +21,9 @@ func main() {
 	// In-store
 	//
 	beego.Router("/instore-add", &controllers.InstoreAddController{})
+	beego.Router("/instore-add-scanner", &controllers.ScannerAddController{})
 	beego.Router("/instore-pay", &controllers.InstorePayController{})
+	beego.Router("/instore-detail", &controllers.InstoreDetailController{})
 	beego.Router("/instore-qrcode", &controllers.InstoreQrcodeController{})
 	beego.Router("/instore-reverse", &controllers.InstoreReverseController{})
 	beego.Router("/micropay", &controllers.MicropayController{})
