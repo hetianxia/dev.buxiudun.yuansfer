@@ -43,6 +43,7 @@ func (this *ScannerAddController) Post() {
 
 	if "" == reference {
 		reference = fmt.Sprintf("seq_%d", time.Now().Unix())
+		reference = md5Token(reference)
 	}
 
 	req := InstoreAddScanner{
