@@ -22,8 +22,8 @@ password_prefix = "PASSWORD_PREFIX"
 
 redis_addr = "127.0.0.1:6379"
 redis_auth = "AUTH"
-wx_token_key = "WXOA_ACCESSTOKEN_NEW"
-wx_ticket_key = "WXOA_JSAPI_TICKET"
+wx_token_key = "ACCESS_TOKEN"
+wx_ticket_key = "JSAPI_TICKET"
 appid = "APPID"
 secret = "SECRET"
 
