@@ -51,54 +51,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">Reference：</label>
-                <div class="col-lg-6">
-                    <input id="reference" class="form-control" name="reference" placeholder="reference">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-4 control-label">Description：</label>
-                <div class="col-lg-6">
-                    <input id="description" class="form-control" name="description" placeholder="description">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-4 control-label">Note：</label>
-                <div class="col-lg-6">
-                    <input id="note" class="form-control" name="note" placeholder="note">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-4 control-label">Terminal：</label>
-                <div class="col-lg-6">
-                    <tr>
-                        <td>
-                            <input type="hidden" class="form-control" name="terminal1" value="terminal">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="terminal">
-                                <option value="ONLINE">ONLINE</option>
-                                <option value="WAP">WAP</option>
-                            </select>
-                        </td>
-                    </tr>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-4 control-label">IpnUrl：</label>
-                <div class="col-lg-6">
-                    <input id="ipnUrl" class="form-control" name="ipnUrl" placeholder="ipnUrl">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-4 control-label">CallbackUrl：</label>
-                <div class="col-lg-6">
-                    <input id="callbackUrl" class="form-control" name="callbackUrl" placeholder="callbackUrl">
-                </div>
-            </div>
-            <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
                     <a href="/instore-pay">
                         <button type="submit" class="btn btn-default" onclick="return checkInput();">提交</button>

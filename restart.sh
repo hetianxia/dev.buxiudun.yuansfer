@@ -9,3 +9,4 @@ else
 fi
 
 nohup ./buxiudun >> nohup.out 2>&1 &
+cat ./nohup.out

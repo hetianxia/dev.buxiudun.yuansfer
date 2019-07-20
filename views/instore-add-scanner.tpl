@@ -37,26 +37,6 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">支付方式：</label>
-                <div class="col-lg-6">
-                    <!-- <input id="vendor" class="form-control" name="vendor" placeholder="vendor"> -->
-                    <tr>
-                        <td>
-                            <input type="hidden" class="form-control" name="vendor1" value="vendor">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="vendor">
-                                <option value="alipay">alipay</option>
-                                <option value="wechatpay">wechatpay</option>
-                                <option value="unionpay">unionpay</option>
-                            </select>
-                        </td>
-                    </tr>
-                </div>
-            </div>
-            <div class="form-group">
                 <label class="col-lg-4 control-label">Reference：</label>
                 <div class="col-lg-6">
                     <input id="reference" class="form-control" name="reference" placeholder="reference">
@@ -75,33 +55,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-lg-4 control-label">Terminal：</label>
-                <div class="col-lg-6">
-                    <tr>
-                        <td>
-                            <input type="hidden" class="form-control" name="terminal1" value="terminal">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <select name="terminal">
-                                <option value="ONLINE">ONLINE</option>
-                                <option value="WAP">WAP</option>
-                            </select>
-                        </td>
-                    </tr>
-                </div>
-            </div>
-            <div class="form-group">
                 <label class="col-lg-4 control-label">IpnUrl：</label>
                 <div class="col-lg-6">
-                    <input id="ipnUrl" class="form-control" name="ipnUrl" placeholder="ipnUrl">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-lg-4 control-label">CallbackUrl：</label>
-                <div class="col-lg-6">
-                    <input id="callbackUrl" class="form-control" name="callbackUrl" placeholder="callbackUrl">
+                    <input id="ipnUrl" class="form-control" name="ipnUrl" placeholder="IpnUrl">
                 </div>
             </div>
             <div class="form-group">
