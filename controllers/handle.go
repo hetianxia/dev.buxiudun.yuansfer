@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"crypto/md5"
+	"crypto/sha1"
 	"encoding/hex"
 	"io/ioutil"
 	"net/http"
@@ -101,4 +102,36 @@ func VerifySignNotify(values url.Values, token string) (m map[string]string, r b
 	vs := md5Token(pre)
 
 	return m, vs == verifySign
+}
+
+func parseSignature(obj signature) map[string]string {
+	t := reflect.TypeOf(obj)
+	v := reflect.ValueOf(obj)
+	var data = make(map[string]string)
+	for i := 0; i < t.NumField(); i++ {
+		data[t.Field(i).Tag.Get("json")] = v.Field(i).String()
+	}
+	return data
+}
+
+func map2byte(m map[string]string) []byte {
+	var keys []string
+	for k := range m {
+		if m[k] != "" {
+			keys = append(keys, k)
+		}
+	}
+	sort.Strings(keys)
+	des := ""
+	for _, key := range keys {
+		des += key + "=" + m[key] + "&"
+	}
+	b := []byte(des)[0 : len(des)-1]
+	return b
+}
+
+func Sha1(data []byte) string {
+	sha1 := sha1.New()
+	sha1.Write(data)
+	return hex.EncodeToString(sha1.Sum([]byte(nil)))
 }

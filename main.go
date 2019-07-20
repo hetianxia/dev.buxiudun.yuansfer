@@ -29,7 +29,10 @@ func main() {
 	beego.Router("/micropay", &controllers.MicropayController{})
 	beego.Router("/refund", &controllers.RefundController{})
 
+	beego.Router("/wx", &controllers.WxController{})
+
 	beego.AutoRouter(&controllers.RecurringController{})
+	beego.AutoRouter(&controllers.WxController{})
 
 	beego.Run()
 }
