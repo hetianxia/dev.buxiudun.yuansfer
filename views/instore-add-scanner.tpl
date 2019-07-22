@@ -2,7 +2,7 @@
 <title>pay - Yuansfer</title>
 </head>
 
-<body onload="startTime()">
+<body onload="setCallback()">
     <div class="container" style="width: 500px;">
         {{template "navbar" .}}
         <form class="form-horizontal" method="POST" action="/instore-add-scanner">
