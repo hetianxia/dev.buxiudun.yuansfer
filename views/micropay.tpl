@@ -124,7 +124,7 @@
                     <button class="btn btn-default" onclick="return backToHome();">返回</button>
                     <script type="text/javascript">
                     function backToHome() {
-                        window.location.href = "/";
+                        window.location.href = "/micropay/";
                         return false;
                     }
 

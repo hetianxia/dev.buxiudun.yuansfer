@@ -68,7 +68,7 @@
                     <button class="btn btn-default" onclick="return backToHome();">返回</button>
                     <script type="text/javascript">
                     function backToHome() {
-                        window.location.href = "/forced-auth";
+                        window.location.href = "/forced-auth/";
                         return false;
                     }
 

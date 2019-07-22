@@ -31,7 +31,7 @@
                     <button class="btn btn-default" onclick="return backToHome();">返回</button>
                     <script type="text/javascript">
                     function backToHome() {
-                        window.location.href = "/instore-add";
+                        window.location.href = "/instore-add/";
                         return false;
                     }
                     </script>
