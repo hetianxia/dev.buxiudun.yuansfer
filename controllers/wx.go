@@ -1,23 +1,16 @@
 package controllers
 
-import (
-	"fmt"
-)
-
 type WxController struct {
 	Controller
 }
 
-// Get to veirfy service from wechat
+// Get the response for veirfy-service from wechat
 func (w *WxController) Get() {
-	fmt.Println("--WxController--GET-----")
 	echoStr := w.Input().Get("echostr")
-	fmt.Println("echostr:", echoStr)
 	w.Ctx.WriteString(echoStr)
 }
 
 func (w *WxController) Post() {
-
 	w.Ctx.WriteString("Hello World")
 }
 
