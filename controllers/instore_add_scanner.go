@@ -86,8 +86,6 @@ func (r InstoreAddScanner) PostToYuansfer() (string, error) {
 	)
 
 	addUrl = YuansferHost + instoreAddScanner
-	fmt.Println("instore add scanner addUrl:", addUrl)
 	values := generateValues(r, YuansferAPI.Token.InstoreToken)
-	fmt.Println("values:", values)
 	return postToYuansfer(addUrl, values)
 }

@@ -2,7 +2,7 @@
 <title>pay - Yuansfer</title>
 </head>
 
-<body onload="startTime()">
+<body onload="setCallback()">
     <div class="container" style="width: 500px;">
         {{template "navbar" .}}
         <form class="form-horizontal" method="POST" action="/">
@@ -54,7 +54,7 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Reference：</label>
                 <div class="col-lg-6">
-                    <input id="reference" class="form-control" name="reference" placeholder="reference">
+                    <input id="reference" class="form-control" name="reference" value="{{.reference}}">
                 </div>
             </div>
             <div class="form-group">
@@ -91,13 +91,13 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">IpnUrl：</label>
                 <div class="col-lg-6">
-                    <input id="ipnUrl" class="form-control" name="ipnUrl" placeholder="ipnUrl">
+                    <input id="ipnUrl" class="form-control" name="ipnUrl">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-4 control-label">CallbackUrl：</label>
                 <div class="col-lg-6">
-                    <input id="callbackUrl" class="form-control" name="callbackUrl" placeholder="callbackUrl">
+                    <input id="callbackUrl" class="form-control" name="callbackUrl">
                 </div>
             </div>
             <div class="form-group">

@@ -75,5 +75,13 @@ console.log(window.location.href.split('#')[0])
 });
     });
 
+    function setCallback(){
+      var ipn = window.location.href.split('#')[0];
+      document.getElementsByName("ipnUrl")[0].value = ipn + 'callback';
+      var callback = ipn + 'callback?yuansferId={yuansferId}&status={status}&amount={amount}&time={time}&reference={reference}&note={note}&verifySign={verifySign}';
+      document.getElementsByName("callbackUrl")[0].value = callback;
+
+    }
+
 </script>
 {{end}}

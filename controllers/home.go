@@ -13,6 +13,9 @@ type HomeController struct {
 }
 
 func (this *HomeController) Get() {
+	reference := fmt.Sprintf("seq_%d", time.Now().Unix())
+	reference = md5Token(reference)
+	this.Data["reference"] = reference
 	this.Data["IsPay"] = true
 	this.TplName = "submit.tpl"
 }
