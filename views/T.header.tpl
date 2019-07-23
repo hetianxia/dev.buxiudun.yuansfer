@@ -76,7 +76,9 @@ console.log(window.location.href.split('#')[0])
     });
 
     function setCallback(){
-      var ipn = window.location.href.split('#')[0] + 'callback';
+      var url = window.location.href.split('#')[0].split('/')
+      var domain = url[0]+'//'+url[2]
+      var ipn = domain + '/callback';
       document.getElementsByName("ipnUrl")[0].value = ipn;
       var callback = ipn + '?yuansferId={yuansferId}&status={status}&amount={amount}&time={time}&reference={reference}&note={note}&verifySign={verifySign}';
       document.getElementsByName("callbackUrl")[0].value = callback;
