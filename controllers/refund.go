@@ -26,6 +26,7 @@ func (this *RefundController) Post() {
 	amt := this.Input().Get("amt")
 	rmbAmt := this.Input().Get("rmbAmt")
 	managerAccountNo := this.Input().Get("managerAccountNo")
+	transactionNo := this.Input().Get("transactionNo")
 
 	req := yuan.Refund{
 		MerchantNo:       merchantNo,
@@ -35,6 +36,7 @@ func (this *RefundController) Post() {
 		Amount:           amt,
 		RmbAmount:        rmbAmt,
 		ManagerAccountNo: managerAccountNo,
+		TransactionNo:    transactionNo,
 	}
 
 	ret, err := req.PostToYuansfer()

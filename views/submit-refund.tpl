@@ -37,6 +37,12 @@
                     <input id="reference" class="form-control" name="reference" placeholder="reference">
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-lg-4 control-label">TransactionNo：</label>
+                <div class="col-lg-6">
+                    <input id="transactionNo" class="form-control" name="transactionNo" placeholder="TransactionNo">
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="col-lg-4 control-label">Admin Acct：</label>
