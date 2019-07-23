@@ -39,7 +39,7 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Reference：</label>
                 <div class="col-lg-6">
-                    <input id="reference" class="form-control" name="reference" placeholder="reference">
+                    <input id="reference" class="form-control" name="reference" value="{{.reference}}">
                 </div>
             </div>
             <div class="form-group">

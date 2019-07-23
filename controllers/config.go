@@ -52,7 +52,7 @@ const (
 )
 
 func init() {
-	env := "dev"
+	env := "sandbox"
 	s := strings.Split(configFile, ".")
 	fileType := s[len(s)-1]
 
@@ -76,7 +76,7 @@ func init() {
 	}
 
 	yuansferHost = map[string]string{
-		"dev":     bxdConf.Host[0],
+		"sandbox": bxdConf.Host[0],
 		"product": bxdConf.Host[1],
 	}[env]
 

@@ -28,6 +28,9 @@ type InstoreAddScanner struct {
 }
 
 func (this *ScannerAddController) Get() {
+	reference := fmt.Sprintf("seq_%d", time.Now().Unix())
+	reference = md5Token(reference)
+	this.Data["reference"] = reference
 	this.Data["IsInstoreAddScanner"] = true
 	this.TplName = "instore-add-scanner.tpl"
 }
