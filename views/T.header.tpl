@@ -3,7 +3,7 @@
 
 <html>
   	<head>
-		<link rel="shortcut icon" href="/static/img/favicon.jpg" />
+		<link rel="shortcut icon" href="/static/img/yuansfer.png" />
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		 <!-- Stylesheets -->
@@ -80,7 +80,7 @@ console.log(window.location.href.split('#')[0])
       var domain = url[0]+'//'+url[2]
       var ipn = domain + '/callback';
       document.getElementsByName("ipnUrl")[0].value = ipn;
-      var callback = ipn + '?yuansferId={yuansferId}&status={status}&amount={amount}&time={time}&reference={reference}&note={note}&verifySign={verifySign}';
+      var callback = ipn + '?yuansferId={yuansferId}&status={status}&amount={amount}&time={time}&reference={reference}&note={note}';
       document.getElementsByName("callbackUrl")[0].value = callback;
 
     }

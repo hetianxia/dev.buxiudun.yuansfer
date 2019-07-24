@@ -23,6 +23,7 @@ type Recurring struct {
 	Status       string `json:"status"`
 	StoreNo      string `json:"storeNo"`
 	RetCode      string `json:"ret_code"`
+	Amount       string `json:"amount"`
 
 	router string
 }
@@ -112,6 +113,7 @@ func (r *RecurringController) Update() {
 	scheduleNo := r.Input().Get("scheduleNo")
 	status := r.Input().Get("stat")
 	paymentCount := r.Input().Get("count")
+	amt := r.Input().Get("amt")
 
 	req := &Recurring{
 		ScheduleNo:   scheduleNo,
@@ -120,6 +122,7 @@ func (r *RecurringController) Update() {
 		Status:       status,
 		PaymentCount: paymentCount,
 		router:       "update",
+		Amount:       amt,
 	}
 
 	resp, err = req.PostToYuansfer()

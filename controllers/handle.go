@@ -39,8 +39,10 @@ func md5Token(data string) string {
 func generateValues(req yuan.Yuansfer, token string) url.Values {
 	values := url.Values{}
 	data := struct2Map(req)
-	pre := map2Str(data) + md5Token(token)
-	values.Add("verifySign", md5Token(pre))
+	tk := md5Token(token)
+	buf := map2Str(data)
+	buf.WriteString(tk)
+	values.Add("verifySign", md5Token(buf.String()))
 
 	for key, value := range data {
 		if value != "" {
@@ -51,7 +53,7 @@ func generateValues(req yuan.Yuansfer, token string) url.Values {
 	return values
 }
 
-func map2Str(m map[string]string) string {
+func map2Str(m map[string]string) bytes.Buffer {
 	var keys []string
 	for k := range m {
 		if m[k] != "" {
@@ -69,7 +71,7 @@ func map2Str(m map[string]string) string {
 		buf.WriteString("&")
 	}
 
-	return buf.String()
+	return buf
 }
 
 func postToYuansfer(addr string, values url.Values) (string, error) {
@@ -103,9 +105,12 @@ func values2Map(m url.Values) map[string]string {
 //VerifySignNotify checks the parameters from Yuansfer with the value of verifySign.
 func VerifySignNotify(values url.Values, token string) (m map[string]string, r bool) {
 	verifySign := values.Get("verifySign")
+
 	m = values2Map(values)
-	pre := map2Str(m) + md5Token(token)
-	vs := md5Token(pre)
+	tk := md5Token(token)
+	buf := map2Str(m)
+	buf.WriteString(tk)
+	vs := md5Token(buf.String())
 
 	return m, vs == verifySign
 }

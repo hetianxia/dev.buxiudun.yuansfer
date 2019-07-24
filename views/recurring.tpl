@@ -148,6 +148,12 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-lg-4 control-label">金额：</label>
+                <div class="col-lg-6">
+                    <input id="amt" class="form-control" name="amt" placeholder="amount">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-lg-4 control-label">Count</label>
                 <div class="col-lg-6">
                     <input id="count" class="form-control" name="count" placeholder="Count">
