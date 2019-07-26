@@ -19,6 +19,7 @@ var (
 )
 
 type yuansferAPI struct {
+	Env                 string        `toml:"env"`
 	Host                []string      `toml:"yuansfer_host"`
 	OnlinePayment       string        `toml:"online_payment_url"`
 	OnlineQuery         string        `toml:"online_query_url"`
@@ -52,7 +53,6 @@ const (
 )
 
 func init() {
-	env := "sandbox"
 	s := strings.Split(configFile, ".")
 	fileType := s[len(s)-1]
 
@@ -78,7 +78,7 @@ func init() {
 	yuansferHost = map[string]string{
 		"sandbox": bxdConf.Host[0],
 		"product": bxdConf.Host[1],
-	}[env]
+	}[bxdConf.Env]
 
 	WxAccessToken = bxdConf.WxAccessTokenKey
 	WxJSAPITicket = bxdConf.WxJSAPITicketKey
