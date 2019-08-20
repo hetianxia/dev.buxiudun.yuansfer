@@ -14,6 +14,9 @@ type MicropayController struct {
 }
 
 func (this *MicropayController) Get() {
+	reference := fmt.Sprintf("seq_%d", time.Now().Unix())
+	reference = md5Token(reference)
+	this.Data["reference"] = reference
 	this.Data["IsMicroPay"] = true
 	this.TplName = "micropay.tpl"
 }
@@ -28,6 +31,8 @@ func (this *MicropayController) Post() {
 	note := this.Input().Get("note")
 	ipnUrl := this.Input().Get("ipnUrl")
 	openid := this.Input().Get("openid")
+	vendor := this.Input().Get("vendor")
+	terminal := this.Input().Get("terminal")
 
 	if "" == reference {
 		reference = fmt.Sprintf("seq_%d", time.Now().Unix())
@@ -38,12 +43,13 @@ func (this *MicropayController) Post() {
 		Currency:    "USD",
 		Amount:      amt,
 		RmbAmount:   rmbAmt,
-		Vendor:      "wechatpay",
+		Vendor:      vendor,
 		Reference:   reference,
 		IpnURL:      ipnUrl,
 		Description: description,
 		Note:        note,
 		Openid:      openid,
+		Terminal:    terminal,
 	}
 
 	resp, err := req.PostToYuansfer()

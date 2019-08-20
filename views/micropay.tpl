@@ -44,7 +44,6 @@
                             <select name="vendor">
                                 <option value="alipay">alipay</option>
                                 <option value="wechatpay">wechatpay</option>
-                                <option value="unionpay">unionpay</option>
                             </select>
                         </td>
                     </tr>
@@ -53,7 +52,7 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Reference：</label>
                 <div class="col-lg-6">
-                    <input id="reference" class="form-control" name="reference" placeholder="reference">
+                    <input id="reference" class="form-control" name="reference" value="{{.reference}}">
                 </div>
             </div>
             <div class="form-group">
@@ -79,8 +78,8 @@
                     <tr>
                         <td>
                             <select name="terminal">
-                                <option value="ONLINE">ONLINE</option>
-                                <option value="WAP">WAP</option>
+                                <option value="APP">APP</option>
+                                <option value="MINIPROGRAM">MINIPROGRAM</option>
                             </select>
                         </td>
                     </tr>
