@@ -53,19 +53,19 @@
             <div class="form-group">
                 <label class="col-lg-4 control-label">Reference：</label>
                 <div class="col-lg-6">
-                    <input id="reference" class="form-control" name="reference" placeholder="reference">
+                    <input id="reference" class="form-control" name="reference" placeholder="reference" value="{{.reference}}">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-4 control-label">Description：</label>
                 <div class="col-lg-6">
-                    <input id="description" class="form-control" name="description" placeholder="description">
+                    <input id="description" class="form-control" name="description" placeholder="description" value="{{.reference}}">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-lg-4 control-label">Note：</label>
                 <div class="col-lg-6">
-                    <input id="note" class="form-control" name="note" placeholder="note">
+                    <input id="note" class="form-control" name="note" placeholder="note" value="{{.reference}}">
                 </div>
             </div>
             <div class="form-group">

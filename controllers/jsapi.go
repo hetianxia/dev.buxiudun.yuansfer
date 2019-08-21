@@ -84,8 +84,9 @@ func requestToken() string {
 	}
 	client := &http.Client{Transport: tr}
 
-	urlGetToken := fmt.Sprintf(UrlGetToken, AppID, Secret)
-	resp, err := client.Get(urlGetToken)
+	// urlGetToken := fmt.Sprintf(UrlGetToken, AppID, Secret)
+	// resp, err := client.Get(urlGetToken)
+	resp, err := client.Get(UrlGetToken)
 	if err != nil {
 		fmt.Println("requestToken error:", err.Error())
 		return ""
@@ -145,6 +146,7 @@ func requestJSAPITicket() string {
 
 	addr := fmt.Sprintf(UrlGetTicket, accessToken)
 	resp, err := client.Get(addr)
+
 	if err != nil {
 		fmt.Println("requestTicket error:", err.Error())
 		return ""

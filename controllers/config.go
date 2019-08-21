@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	// "flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -61,7 +60,6 @@ func init() {
 		if _, err := toml.DecodeFile(configFile, &bxdConf); err != nil {
 			log.Fatalf("Decode toml err:%s", err.Error())
 		}
-		fmt.Println("bxdConf:", bxdConf)
 	case "yml", "yaml":
 		data, err := ioutil.ReadFile(configFile)
 		if err != nil {
@@ -84,4 +82,6 @@ func init() {
 	WxJSAPITicket = bxdConf.WxJSAPITicketKey
 	AppID = bxdConf.AppID
 	Secret = bxdConf.Secret
+
+	UrlGetToken = fmt.Sprintf(UrlGetToken, AppID, Secret)
 }
