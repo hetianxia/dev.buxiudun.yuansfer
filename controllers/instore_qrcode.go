@@ -14,6 +14,9 @@ type InstoreQrcodeController struct {
 }
 
 func (this *InstoreQrcodeController) Get() {
+	reference := fmt.Sprintf("seq_%d", time.Now().Unix())
+	reference = md5Token(reference)
+	this.Data["reference"] = reference
 	this.Data["IsCreateQrcode"] = true
 	this.TplName = "instore-create-qrcode.tpl"
 }
