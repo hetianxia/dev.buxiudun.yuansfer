@@ -21,6 +21,7 @@ func (this *HomeController) Get() {
 }
 
 func (this *HomeController) Post() {
+	groupNo := this.Input().Get("groupNo")
 	merchantNo := this.Input().Get("merchantNo")
 	storeNo := this.Input().Get("storeNo")
 	amt := this.Input().Get("amt")
@@ -45,6 +46,7 @@ func (this *HomeController) Post() {
 	}
 
 	req := &yuan.Securepay{
+		GroupNo:      groupNo,
 		MerchantNo:   merchantNo,
 		StoreNo:      storeNo,
 		Currency:     "USD",

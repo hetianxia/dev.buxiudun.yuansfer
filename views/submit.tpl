@@ -7,6 +7,12 @@
         {{template "navbar" .}}
         <form class="form-horizontal" method="POST" action="/">
             <div class="form-group">
+                <label class="col-lg-4 control-label">groupNo：</label>
+                <div class="col-lg-6">
+                    <input id="groupNo" class="form-control" name="groupNo" placeholder="groupNo">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-lg-4 control-label">商户号：</label>
                 <div class="col-lg-6">
                     <input id="merchantNo" class="form-control" name="merchantNo" placeholder="merchantNo">
